@@ -1,0 +1,27 @@
+```json
+
+{
+
+"name": "ark-sentinel-coo",
+
+"version": "1.0.0",
+
+"description": "200-Year Sentinel Ark COO",
+
+"main": "index.js",
+
+"scripts": {
+
+"start": "node index.js"
+
+},
+
+"dependencies": {
+
+"dotenv": "^16.0.0",
+
+"ethers": "^6.0.0"
+
+}
+
+}
