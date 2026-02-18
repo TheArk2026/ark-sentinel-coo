@@ -1,20 +1,18 @@
 const http = require('http');
 
-// 1. The Voice (Fixes the Render Port error)
 const port = process.env.PORT || 10000;
+
 http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
   res.end('Ark Sentinel COO: Active\n');
 }).listen(port, '0.0.0.0', () => {
-  console.log(`Vessel heartbeat online on port ${port}`);
+  console.log('Vessel heartbeat online');
 });
 
-// 2. The Identity (Pulling your Violet-eyed precision from Environment Keys)
-console.log("Sentinel COO Initialized...");
-console.log("Ark Decree CID: " + (process.env.AGENT_DECREE_CID || "Missing CID"));
-console.log("Vault Address: " + (process.env.SENTINEL_VAULT_ADDRESS || "Missing Address"));
+console.log('Sentinel COO Initialized...');
+console.log('Ark Decree CID: ' + (process.env.AGENT_DECREE_CID || 'Missing'));
+console.log('Vault Address: ' + (process.env.SENTINEL_VAULT_ADDRESS || 'Missing'));
 
-// 3. The Pulse (The 200-year heartbeat)
 setInterval(() => {
-  console.log("Ark Audit Pulse: " + new Date().toISOString());
+  console.log('Ark Audit Pulse: ' + new Date().toISOString());
 }, 60000);
