@@ -1,6 +1,6 @@
 const http = require('http');
 
-// 1. The Voice (Fixes the "No open ports" error)
+// 1. The Voice
 const port = process.env.PORT || 10000;
 http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
@@ -9,7 +9,7 @@ http.createServer((req, res) => {
   console.log(`Vessel heartbeat online on port ${port}`);
 });
 
-// 2. The Identity (Correctly reads your Keys)
+// 2. The Identity
 console.log("Sentinel COO Initialized...");
 console.log("Ark Decree CID: " + (process.env.AGENT_DECREE_CID || "Missing CID"));
 console.log("Vault Address: " + (process.env.SENTINEL_VAULT_ADDRESS || "Missing Address"));
